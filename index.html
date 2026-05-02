@@ -4,353 +4,430 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sangha Auto Detailing | Premium Mobile Detailing</title>
+    <meta name="description" content="Premium mobile car detailing serving Alberta and Ontario. Book online, we come to you, and you pay after service.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <h1>Sangha Auto Detailing</h1>
+                <a href="index.html" aria-label="Sangha Auto Detailing home">
+                    <span class="logo-mark"><img src="images/Logo.jpeg" alt="" aria-hidden="true"></span>
+                    <h1>Sangha Auto Detailing</h1>
+                </a>
             </div>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span><i class="fas fa-bars"></i></span>
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
             </label>
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Main navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="plans.html">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="book.html" class="btn-book">Book Now</a></li>
                     <li class="cart-icon">
-                        <a href="book.html"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="book.html" aria-label="View booking cart"><i class="fas fa-shopping-cart"></i></a>
                         <span class="cart-count">0</span>
                     </li>
                 </ul>
             </nav>
+            <button class="theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/16473439286?text=Hi%20Sangha%20Auto%20Detailing!" class="floating-wa" target="_blank">
+    <a href="https://wa.me/16473239286?text=Hi%20Sangha%20Auto%20Detailing!" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Message Sangha Auto Detailing on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Premium Mobile Car Detailing in Alberta & Ontario</h2>
-            <p class="trust-badge">⭐ 4.9/5 from 120+ happy customers | Fully Insured | Eco-Friendly</p>
-            <p class="service-areas"><i class="fas fa-map-marker-alt"></i> Serving Calgary • Edmonton • Toronto • Mississauga & more</p>
-            <div class="hero-buttons">
-                <a href="book.html" class="btn btn-primary">Book Now</a>
-                <a href="https://wa.me/12345678901?text=Hi%20Sangha%20Auto%20Detailing!" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            </div>
-            <p class="hero-phone"><i class="fas fa-phone-alt"></i> Call us: +1 (647) 323-9286</p>
-        </div>
-    </section>
+    <div class="soap-bubbles" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <!-- Services / Packages Section -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Our Detailing Packages</h2>
-            <div class="packages-grid">
-                <!-- Basic Package -->
-                <div class="package-card">
-                    <h3>Basic Shine</h3>
-                    <p class="price">$99</p>
-                    <p class="duration"><i class="far fa-clock"></i> 1.5 hours</p>
-                    <ul class="includes">
-                        <li><i class="fas fa-check"></i> Hand wash & dry</li>
-                        <li><i class="fas fa-check"></i> Interior vacuum</li>
-                        <li><i class="fas fa-check"></i> Windows & mirrors</li>
-                        <li><i class="fas fa-check"></i> Tyre shine</li>
-                    </ul>
-                    <button class="btn-add-to-cart" data-id="basic" data-name="Basic Shine" data-price="99">Add to Cart</button>
-                </div>
-                <!-- Premium Package -->
-                <div class="package-card featured">
-                    <h3>Premium Detail</h3>
-                    <p class="price">$199</p>
-                    <p class="duration"><i class="far fa-clock"></i> 2 hours</p>
-                    <ul class="includes">
-                        <li><i class="fas fa-check"></i> Everything in Basic</li>
-                        <li><i class="fas fa-check"></i> Clay bar treatment</li>
-                        <li><i class="fas fa-check"></i> Wax polish</li>
-                        <li><i class="fas fa-check"></i> Leather conditioning</li>
-                    </ul>
-                    <button class="btn-add-to-cart" data-id="premium" data-name="Premium Detail" data-price="199">Add to Cart</button>
-                </div>
-                <!-- Deluxe Package -->
-                <div class="package-card">
-                    <h3>Deluxe Complete</h3>
-                    <p class="price">$299</p>
-                    <p class="duration"><i class="far fa-clock"></i> 3 hours</p>
-                    <ul class="includes">
-                        <li><i class="fas fa-check"></i> Everything in Premium</li>
-                        <li><i class="fas fa-check"></i> Engine bay cleaning</li>
-                        <li><i class="fas fa-check"></i> Headlight restoration</li>
-                        <li><i class="fas fa-check"></i> Paint correction</li>
-                    </ul>
-                    <button class="btn-add-to-cart" data-id="deluxe" data-name="Deluxe Complete" data-price="299">Add to Cart</button>
-                </div>
-            </div>
-
-            <!-- Add-Ons (Upsell) -->
-            <h3 class="subsection-title">Popular Add-Ons</h3>
-            <div class="addons-grid">
-                <div class="addon-card">
-                    <span>Pet Hair Removal</span> <span class="addon-price">+$30</span>
-                    <button class="btn-addon btn-add-to-cart" data-id="pet-hair" data-name="Pet Hair Removal" data-price="30">Add</button>
-                </div>
-                <div class="addon-card">
-                    <span>Odor Removal</span> <span class="addon-price">+$40</span>
-                    <button class="btn-addon btn-add-to-cart" data-id="odor" data-name="Odor Removal" data-price="40">Add</button>
-                </div>
-                <div class="addon-card">
-                    <span>Seat Shampoo</span> <span class="addon-price">+$60</span>
-                    <button class="btn-addon btn-add-to-cart" data-id="seat-shampoo" data-name="Seat Shampoo" data-price="60">Add</button>
-                </div>
-                <div class="addon-card">
-                    <span>Scratch Removal</span> <span class="addon-price">+$80</span>
-                    <button class="btn-addon btn-add-to-cart" data-id="scratch" data-name="Scratch Removal" data-price="80">Add</button>
-                </div>
-                <div class="addon-card">
-                    <span>Wax Upgrade</span> <span class="addon-price">+$50</span>
-                    <button class="btn-addon btn-add-to-cart" data-id="wax" data-name="Wax Upgrade" data-price="50">Add</button>
-                </div>
-                <div class="addon-card">
-                    <span>Rim Deep Clean</span> <span class="addon-price">+$25</span>
-                    <button class="btn-addon btn-add-to-cart" data-id="rim" data-name="Rim Deep Clean" data-price="25">Add</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works (Mobile Service) -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>1. Book Online</h3>
-                    <p>Choose your package, date, and location.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-truck"></i></div>
-                    <h3>2. We Come To You</h3>
-                    <p>We arrive at your home or office.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-car"></i></div>
-                    <h3>3. We Detail Your Vehicle</h3>
-                    <p>Professional detailing with eco-friendly products.</p>
-                </div>
-                <div class="step">
-                    <div class="step-icon"><i class="fas fa-credit-card"></i></div>
-                    <h3>4. Pay After Service</h3>
-                    <p>Cash, debit, credit, or e‑transfer. No upfront payment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-us">
-        <div class="container">
-            <h2 class="section-title">Why Choose Sangha Auto Detailing?</h2>
-            <div class="why-grid">
-                <div class="why-item"><i class="fas fa-shield-alt"></i> Fully Insured</div>
-                <div class="why-item"><i class="fas fa-tools"></i> Professional Equipment</div>
-                <div class="why-item"><i class="fas fa-leaf"></i> Eco-Friendly Products</div>
-                <div class="why-item"><i class="fas fa-star"></i> Satisfaction Guarantee</div>
-                <div class="why-item"><i class="fas fa-user-check"></i> Experienced Detailers</div>
-                <div class="why-item"><i class="fas fa-tag"></i> Affordable Pricing</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Before & After Gallery -->
-    <section class="gallery">
-        <div class="container">
-            <h2 class="section-title">Before & After</h2>
-            <div class="gallery-grid">
-                <!-- Replace src with your own images -->
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200?text=Before" alt="Before">
-                    <img src="https://via.placeholder.com/300x200?text=After" alt="After">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200?text=Before" alt="Before">
-                    <img src="https://via.placeholder.com/300x200?text=After" alt="After">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/300x200?text=Before" alt="Before">
-                    <img src="https://via.placeholder.com/300x200?text=After" alt="After">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Customers Say</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"Amazing service! My car looks brand new. Highly recommend."</p>
-                    <cite>– Sarah T., Toronto</cite>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p>"They came to my office and did an incredible job. Very professional."</p>
-                    <cite>– Mike R., Calgary</cite>
-                </div>
-                <div class="testimonial-card">
-                    <div class="stars">★★★★☆</div>
-                    <p>"Great attention to detail. Fair price and convenient."</p>
-                    <cite>– Jessica L., Mississauga</cite>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Locations Section -->
-    <section id="locations" class="service-areas-section">
-        <div class="container">
-            <h2 class="section-title">Service Areas</h2>
-            <div class="areas-grid">
-                <div class="area-province">
-                    <h3>Ontario</h3>
-                    <ul>
-                        <li>Toronto</li>
-                        <li>Mississauga</li>
-                        <li>Ottawa</li>
-                        <li>Hamilton</li>
-                        <li>London</li>
-                    </ul>
-                </div>
-                <div class="area-province">
-                    <h3>Alberta</h3>
-                    <ul>
-                        <li>Calgary</li>
-                        <li>Edmonton</li>
-                        <li>Red Deer</li>
-                        <li>Lethbridge</li>
-                        <li>Fort McMurray</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="map-placeholder">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880487.585268549!2d-95.677068!3d50.447984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2sCanada!5e0!3m2!1sen!2sus!4v1687459850843!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-                <p><i class="fas fa-question-circle"></i> Not sure if we serve your area? <a href="#contact">Contact us</a>.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Get in touch</h3>
-                    <p><i class="fas fa-phone"></i> +1 (647) 323-9286</p>
-                    <p><i class="fas fa-envelope"></i> sanghaautodetailing@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Serving Alberta & Ontario</p>
-                    <div class="whatsapp-button">
-                        <a href="https://wa.me/12345678901?text=Hi%20Sangha%20Auto%20Detailing!" target="_blank" class="btn btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i> Message us on WhatsApp
-                        </a>
+    <main>
+        <section class="hero">
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <span class="section-kicker animate-on-scroll"><i class="fas fa-star"></i> Mobile detailing at your door</span>
+                    <h2 class="animate-on-scroll">Make your car look <span>brand new</span> without leaving home.</h2>
+                    <p class="hero-copy animate-on-scroll">Premium interior and exterior detailing for busy drivers across Alberta and Ontario. Book online, we come to you, and payment is collected after service.</p>
+                    <div class="trust-row animate-on-scroll">
+                        <span class="pill"><i class="fas fa-star"></i> <strong>4.9/5</strong> from happy customers</span>
+                        <span class="pill"><i class="fas fa-shield-alt"></i> Fully insured</span>
+                        <span class="pill"><i class="fas fa-leaf"></i> Eco-friendly products</span>
+                    </div>
+                    <div class="hero-buttons animate-on-scroll">
+                        <a href="book.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        <a href="https://wa.me/16473239286?text=Hi%20Sangha%20Auto%20Detailing%2C%20I%20would%20like%20to%20book%20a%20detail." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                        <a href="tel:+16473239286" class="btn btn-ghost"><i class="fas fa-phone-alt"></i> +1 (647) 323-9286</a>
+                    </div>
+                    <div class="hero-badges animate-on-scroll">
+                        <span class="pill"><i class="fas fa-map-marker-alt"></i> Calgary</span>
+                        <span class="pill">Edmonton</span>
+                        <span class="pill">Toronto</span>
+                        <span class="pill">Mississauga</span>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                        <select name="service" id="service">
-                            <option value="Basic Shine">Basic Shine</option>
-                            <option value="Premium Detail">Premium Detail</option>
-                            <option value="Deluxe Complete">Deluxe Complete</option>
-                        </select>
-                        <textarea name="message" rows="5" placeholder="Additional details..."></textarea>
-                        <button type="submit" class="btn btn-primary">Send Request</button>
+
+                <div class="hero-media animate-scale" aria-label="Car detailing photos">
+                    <div class="hero-photo main">
+                        <img src="images/hero-garage-entrance.webp" alt="Detailed vehicle entering a garage" loading="eager">
+                    </div>
+                    <div class="hero-photo small">
+                        <img src="images/final-shine.webp" alt="Finished car shining after detailing" loading="lazy">
+                    </div>
+                    <div class="hero-stat">
+                        <strong>No upfront payment</strong>
+                        <span>Cash, debit, credit, or e-transfer after service.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker animate-on-scroll">Simple process</span>
+                    <h2 class="section-title animate-on-scroll">How It Works</h2>
+                </div>
+                <div class="grid four">
+                    <article class="step-card animate-on-scroll">
+                        <span class="step-number">1</span>
+                        <div class="icon-bubble"><i class="fas fa-calendar-check"></i></div>
+                        <h3>Book Online</h3>
+                        <p>Choose your package, date, and location in a few taps.</p>
+                    </article>
+                    <article class="step-card animate-on-scroll">
+                        <span class="step-number">2</span>
+                        <div class="icon-bubble"><i class="fas fa-truck"></i></div>
+                        <h3>We Come To You</h3>
+                        <p>We arrive at your home or office with professional equipment.</p>
+                    </article>
+                    <article class="step-card animate-on-scroll">
+                        <span class="step-number">3</span>
+                        <div class="icon-bubble"><i class="fas fa-spray-can"></i></div>
+                        <h3>We Detail Your Vehicle</h3>
+                        <p>Interior and exterior care using safe, eco-friendly products.</p>
+                    </article>
+                    <article class="step-card animate-on-scroll">
+                        <span class="step-number">4</span>
+                        <div class="icon-bubble"><i class="fas fa-credit-card"></i></div>
+                        <h3>Pay After Service</h3>
+                        <p>Cash, debit, credit, or e-transfer. No upfront payment.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker animate-on-scroll">Why drivers choose us</span>
+                    <h2 class="section-title animate-on-scroll">Premium care, practical convenience.</h2>
+                </div>
+                <div class="grid three">
+                    <article class="benefit-card animate-on-scroll">
+                        <div class="icon-bubble"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Fully Insured</h3>
+                        <p>Professional mobile service with coverage for peace of mind.</p>
+                    </article>
+                    <article class="benefit-card animate-on-scroll">
+                        <div class="icon-bubble"><i class="fas fa-tools"></i></div>
+                        <h3>Professional Equipment</h3>
+                        <p>Detailing tools, products, and techniques built for real results.</p>
+                    </article>
+                    <article class="benefit-card animate-on-scroll">
+                        <div class="icon-bubble"><i class="fas fa-leaf"></i></div>
+                        <h3>Eco-Friendly Products</h3>
+                        <p>Safe products for your car, your driveway, and your family.</p>
+                    </article>
+                    <article class="benefit-card animate-on-scroll">
+                        <div class="icon-bubble"><i class="fas fa-star"></i></div>
+                        <h3>Satisfaction Guarantee</h3>
+                        <p>We finish the job with care and make sure you are happy.</p>
+                    </article>
+                    <article class="benefit-card animate-on-scroll">
+                        <div class="icon-bubble"><i class="fas fa-user-check"></i></div>
+                        <h3>Experienced Detailers</h3>
+                        <p>Trained hands that understand daily drivers, SUVs, trucks, and family vehicles.</p>
+                    </article>
+                    <article class="benefit-card animate-on-scroll">
+                        <div class="icon-bubble"><i class="fas fa-tag"></i></div>
+                        <h3>Affordable Pricing</h3>
+                        <p>Clear packages, useful add-ons, and no hidden service fees.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker animate-on-scroll">Real transformations</span>
+                    <h2 class="section-title animate-on-scroll">Before &amp; After</h2>
+                    <p class="section-copy animate-on-scroll">Swipe-worthy results from real detailing work.</p>
+                </div>
+                <div class="gallery-grid coverflow" data-coverflow>
+                    <article class="before-after-card coverflow-card is-active animate-on-scroll">
+                        <div class="ba-images">
+                            <div class="ba-image">
+                                <span class="tag">Before</span>
+                                <img src="images/Before.jpeg" alt="Vehicle before detailing" loading="lazy">
+                            </div>
+                            <div class="ba-image">
+                                <span class="tag after">After</span>
+                                <img src="images/After.jpeg" alt="Vehicle after detailing" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ba-caption">Interior and exterior reset with a clean finish.</div>
+                    </article>
+                    <article class="before-after-card coverflow-card is-next animate-on-scroll">
+                        <div class="ba-images">
+                            <div class="ba-image">
+                                <span class="tag">Before</span>
+                                <img src="images/Before 1.jpeg" alt="Second vehicle before detailing" loading="lazy">
+                            </div>
+                            <div class="ba-image">
+                                <span class="tag after">After</span>
+                                <img src="images/After 1.jpeg" alt="Second vehicle after detailing" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ba-caption">Deep clean results that make the cabin feel refreshed.</div>
+                    </article>
+                    <article class="before-after-card coverflow-card is-prev animate-on-scroll">
+                        <div class="ba-images">
+                            <div class="ba-image">
+                                <span class="tag">Before</span>
+                                <img src="images/Before 2.jpeg" alt="Third vehicle before detailing" loading="lazy">
+                            </div>
+                            <div class="ba-image">
+                                <span class="tag after">After</span>
+                                <img src="images/After 2.jpeg" alt="Third vehicle after detailing" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ba-caption">From daily use to ready-for-the-week shine.</div>
+                    </article>
+                    <div class="coverflow-controls" aria-label="Before and after gallery controls">
+                        <button type="button" class="coverflow-btn" data-coverflow-prev aria-label="Previous transformation"><i class="fas fa-chevron-left"></i></button>
+                        <div class="coverflow-dots" aria-label="Transformation slides">
+                            <button type="button" class="is-active" data-coverflow-dot="0" aria-label="Show transformation 1"></button>
+                            <button type="button" data-coverflow-dot="1" aria-label="Show transformation 2"></button>
+                            <button type="button" data-coverflow-dot="2" aria-label="Show transformation 3"></button>
+                        </div>
+                        <button type="button" class="coverflow-btn" data-coverflow-next aria-label="Next transformation"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker animate-on-scroll">Customer words</span>
+                    <h2 class="section-title animate-on-scroll">What Our Customers Say</h2>
+                </div>
+                <div class="grid three">
+                    <article class="testimonial-card animate-on-scroll">
+                        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"Amazing service! My car looks brand new. Highly recommend."</p>
+                        <h3>Sarah T.</h3>
+                        <p>Toronto, ON</p>
+                    </article>
+                    <article class="testimonial-card animate-on-scroll">
+                        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"They came to my office and did an incredible job. Very professional."</p>
+                        <h3>Mike R.</h3>
+                        <p>Calgary, AB</p>
+                    </article>
+                    <article class="testimonial-card animate-on-scroll">
+                        <div class="stars" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                        <p>"Great attention to detail. Fair price and convenient."</p>
+                        <h3>Jessica L.</h3>
+                        <p>Mississauga, ON</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker animate-on-scroll">Service areas</span>
+                    <h2 class="section-title animate-on-scroll">Serving Alberta &amp; Ontario</h2>
+                    <p class="section-copy animate-on-scroll">Not sure if we serve your area? Send us a message and we will confirm.</p>
+                </div>
+                <div class="grid two">
+                    <article class="service-area-card card card-pad animate-slide-left">
+                        <h3><i class="fas fa-city"></i> Ontario</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Toronto</li>
+                            <li><i class="fas fa-check"></i> Mississauga</li>
+                            <li><i class="fas fa-check"></i> Ottawa</li>
+                            <li><i class="fas fa-check"></i> Hamilton</li>
+                            <li><i class="fas fa-check"></i> London</li>
+                        </ul>
+                    </article>
+                    <article class="service-area-card card card-pad animate-slide-right">
+                        <h3><i class="fas fa-mountain"></i> Alberta</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Calgary</li>
+                            <li><i class="fas fa-check"></i> Edmonton</li>
+                            <li><i class="fas fa-check"></i> Red Deer</li>
+                            <li><i class="fas fa-check"></i> Lethbridge</li>
+                            <li><i class="fas fa-check"></i> Fort McMurray</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container contact-layout">
+                <div>
+                    <div class="section-heading left">
+                        <span class="section-kicker animate-on-scroll">Contact us</span>
+                        <h2 class="section-title animate-on-scroll">Get in touch or prepare a message.</h2>
+                        <p class="section-copy animate-on-scroll">Message us on WhatsApp, email us, copy your prepared message, or call directly.</p>
+                    </div>
+                    <div class="contact-list">
+                        <article class="contact-card animate-on-scroll">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <p>Call Us</p>
+                                <a href="tel:+16473239286">+1 (647) 323-9286</a>
+                            </div>
+                        </article>
+                        <article class="contact-card animate-on-scroll">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p>Email Us</p>
+                                <a href="mailto:sanghaautodetailing@gmail.com">sanghaautodetailing@gmail.com</a>
+                            </div>
+                        </article>
+                        <article class="contact-card animate-on-scroll">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Mobile Service</p>
+                                <a href="#contact">Serving Alberta &amp; Ontario</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="form-panel animate-scale">
+                    <form id="contactComposer">
+                        <div class="form-grid two">
+                            <div class="form-group">
+                                <label for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" name="name" autocomplete="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Your Email</label>
+                                <input type="email" id="contact-email" name="email" autocomplete="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" name="phone" autocomplete="tel" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-package">Package</label>
+                                <select id="contact-package" name="package">
+                                    <option>Basic Shine</option>
+                                    <option>Premium Detail</option>
+                                    <option>Deluxe Complete</option>
+                                    <option>Monthly Membership</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+                            <div class="form-group full">
+                                <label for="contact-details">Additional details</label>
+                                <textarea id="contact-details" name="details" placeholder="Vehicle type, location, preferred date, or anything we should know."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Prepare Message</button>
                     </form>
-                    <div id="formSuccess" class="success-message" style="display: none;">
-                        <p>Thank you! We'll contact you shortly. Payment is collected after the service.</p>
+
+                    <div id="preparedPanel" class="prepared-panel" aria-live="polite">
+                        <h3>Thanks! Your message is ready.</h3>
+                        <p>Choose how you would like to send it:</p>
+                        <div id="preparedMessage" class="prepared-message"></div>
+                        <div class="prepared-actions">
+                            <a id="preparedWhatsApp" class="btn btn-whatsapp" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Send via WhatsApp</a>
+                            <a id="preparedEmail" class="btn btn-secondary" href="#"><i class="fas fa-envelope"></i> Send via Email</a>
+                            <button id="copyPreparedMessage" type="button" class="btn btn-ghost"><i class="fas fa-copy"></i> Copy Message</button>
+                            <a class="btn btn-ghost" href="tel:+16473239286"><i class="fas fa-phone"></i> Call Us</a>
+                        </div>
+                        <p class="section-copy">Note: If you do not have WhatsApp, use the Email option to open your email client.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Promotions / Membership -->
-    <section class="promotions">
-        <div class="container">
-            <h2 class="section-title">Special Offers</h2>
-            <div class="promo-grid">
-                <div class="promo-card">
-                    <h3>First-Time Customer</h3>
-                    <p class="promo-discount">10% OFF</p>
-                    <p>your first detailing service.</p>
-                    <a href="book.html?promo=first" class="btn btn-secondary">Claim Offer</a>
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker animate-on-scroll">Special offers</span>
+                    <h2 class="section-title animate-on-scroll">A little extra shine.</h2>
                 </div>
-                <div class="promo-card">
-                    <h3>Monthly Membership</h3>
-                    <p class="promo-discount">$1000/month</p>
-                    <p>Includes 2 washes per month, priority booking, and 10% off additional services.</p>
-                    <a href="book.html?plan=membership" class="btn btn-secondary">Join Now</a>
-                </div>
-                <div class="promo-card">
-                    <h3>Refer a Friend</h3>
-                    <p class="promo-discount">$20 Credit</p>
-                    <p>for both you and your friend after their first service.</p>
-                    <a href="#contact" class="btn btn-secondary">Refer Now</a>
+                <div class="promo-grid">
+                    <article class="offer-card animate-on-scroll">
+                        <h3>First-Time Customer</h3>
+                        <p class="promo-discount">10% OFF</p>
+                        <p>Your first detailing service.</p>
+                        <a href="book.html?promo=FIRST10" class="btn btn-primary">Claim Offer</a>
+                    </article>
+                    <article class="offer-card animate-on-scroll">
+                        <h3>Monthly Membership</h3>
+                        <p class="promo-discount">$35/month</p>
+                        <p>Includes 4 washes per month, priority booking, and 10% off additional services.</p>
+                        <a href="book.html?plan=membership" class="btn btn-primary">Join Now</a>
+                    </article>
+                    <article class="offer-card animate-on-scroll">
+                        <h3>Refer a Friend</h3>
+                        <p class="promo-discount">$20 Credit</p>
+                        <p>For both you and your friend after their first service.</p>
+                        <a href="#contact" class="btn btn-primary">Refer Now</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call-to-Action Banner -->
-    <section class="cta-banner">
-        <div class="container">
-            <h2>Ready to Make Your Car Look Brand New?</h2>
-            <div class="cta-buttons">
-                <a href="book.html" class="btn btn-primary">Book Now</a>
-                <a href="https://wa.me/16473239286?text=Hi%20Sangha%20Auto%20Detailing!" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        <section class="cta-banner">
+            <div class="container">
+                <h2 class="animate-on-scroll">Ready to make your car look brand new?</h2>
+                <div class="cta-buttons animate-on-scroll">
+                    <a href="book.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Now</a>
+                    <a href="https://wa.me/16473239286?text=Hi%20Sangha%20Auto%20Detailing!" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
-                <a href="index.html">Home</a> |
-                <a href="plans.html">Services</a> |
-                <a href="about.html">About</a> |
-                <a href="book.html">Book Now</a> |
-                <a href="terms.html">Terms & Conditions</a>
+                <a href="index.html">Home</a>
+                <a href="plans.html">Services</a>
+                <a href="about.html">About</a>
+                <a href="book.html">Book Now</a>
             </div>
             <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/16473239286?text=Hi%20Sangha%20Auto%20Detailing!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/16473239286?text=Hi%20Sangha%20Auto%20Detailing!" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p><i class="fas fa-phone-alt"></i> +1 (647) 323-9286 | <i class="fas fa-envelope"></i> sanghaautodetailing@gmail.com</p>
-            <p>&copy; 2025 Sangha Auto Detailing. All rights reserved. Fully Insured & Licensed.</p>
+            <p>&copy; 2026 Sangha Auto Detailing. All rights reserved. Fully insured and licensed.</p>
         </div>
     </footer>
 
